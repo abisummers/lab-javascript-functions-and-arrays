@@ -1,81 +1,150 @@
 // Find the maximum
+function maxOfTwoNumbers(numOne, numTwo) {
+  if (numOne > numTwo) {
+    return numOne;
+  } else {
+    return numTwo;
+  }
+}
 
 // Finding Longest Word
+
 var words = [
-  'mystery',
-  'brother',
-  'aviator',
-  'crocodile',
-  'pearl',
-  'orchard',
-  'crackpot'
+  "mystery",
+  "brother",
+  "aviator",
+  "crocodile",
+  "pearl",
+  "orchard",
+  "crackpot"
 ];
+function findLongestWord(array) {
+  var longestWord = "";
+  array.forEach(function(words) {
+    if (words.length > longestWord.length) {
+      longestWord = words;
+    }
+  });
+  if (longestWord.length === 0) {
+    return undefined;
+  }
+  return longestWord;
+}
 
 // Calculating a Sum
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-// Calculate the Average
+// function sumArray(myArray) {
+//   var sum = 0;
 
+//   for (var i = 0; i < myArray.length; i++) {
+//     sum += myArray[i];
+//   }
+//   return sum;
+// }
+
+function sumArray(myArray) {
+  return myArray.reduce((acc, curr) => acc + curr, 0);
+}
+
+// Calculate the Average
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers(numbers) {
+  var sum = 0;
+  if (numbers.length === 0) {
+    return undefined;
+  }
+  for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum / numbers.length;
+}
 
 // Array of Strings
 var wordsArr = [
-  'seat',
-  'correspond',
-  'linen',
-  'motif',
-  'hole',
-  'smell',
-  'smart',
-  'chaos',
-  'fuel',
-  'palace'
+  "seat",
+  "correspond",
+  "linen",
+  "motif",
+  "hole",
+  "smell",
+  "smart",
+  "chaos",
+  "fuel",
+  "palace"
 ];
+
+function averageWordLength(words) {
+  var total = 0;
+  if (words.length === 0) {
+    return undefined;
+  }
+  words.forEach(function(word) {
+    total += word.length;
+  });
+
+  return total / words.length;
+}
 
 // Unique Arrays
 var wordsUnique = [
-  'crab',
-  'poison',
-  'contagious',
-  'simple',
-  'bring',
-  'sharp',
-  'playground',
-  'poison',
-  'communion',
-  'simple',
-  'bring'
+  "crab",
+  "poison",
+  "contagious",
+  "simple",
+  "bring",
+  "sharp",
+  "playground",
+  "poison",
+  "communion",
+  "simple",
+  "bring"
 ];
+
+function uniquifyArray(arr) {
+  var unique = [];
+  if (arr.length === 0) {
+    return undefined;
+  }
+  for (var i = 0; i < arr.length; i++) {
+    if (unique.indexOf(arr[i]) === -1) {
+      unique.push(arr[i]);
+    }
+  }
+  return unique;
+}
 
 // Finding Elements
 var wordsFind = [
-  'machine',
-  'subset',
-  'trouble',
-  'starting',
-  'matter',
-  'eating',
-  'truth',
-  'disobedience'
+  "machine",
+  "subset",
+  "trouble",
+  "starting",
+  "matter",
+  "eating",
+  "truth",
+  "disobedience"
 ];
 
 // Counting Repetion
 var wordsCount = [
-  'machine',
-  'matter',
-  'subset',
-  'trouble',
-  'starting',
-  'matter',
-  'eating',
-  'matter',
-  'truth',
-  'disobedience',
-  'matter'
+  "machine",
+  "matter",
+  "subset",
+  "trouble",
+  "starting",
+  "matter",
+  "eating",
+  "matter",
+  "truth",
+  "disobedience",
+  "matter"
 ];
 // Bonus Quest
 
+// prettier-ignore
 var matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
   [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
